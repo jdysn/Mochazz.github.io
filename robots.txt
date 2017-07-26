@@ -1,0 +1,17 @@
+User-agent: *
+
+Allow: /
+
+Allow: /archives/ 
+
+Disallow: /js/
+
+Disallow: /css/
+
+Disallow: /fonts/
+
+Disallow: /vendors/
+
+Disallow: /fancybox/
+Sitemap: http://mochazz.github.io/sitemap.xml
+Sitemap: http://mochazz.github.io/baidusitemap.xml
