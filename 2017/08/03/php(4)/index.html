@@ -15,30 +15,34 @@
 
 
 
-<meta name="description" content="最近在学习漏洞环境搭建。虽然说网络上有很多集成的环境，但是我们还是要学会单独安装各组件，并将它们关联起来。">
-<meta name="keywords" content="环境搭建">
+<meta name="description" content="为了更好的了解web漏洞，开始学习PHP，仅记录自己不熟悉的部分以及PHP的一些特性。">
+<meta name="keywords" content="PHP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="漏洞环境搭建之Linux+Apache+Mysql+PHP">
-<meta property="og:url" content="https://mochazz.github.io/2017/07/13/LAMP/index.html">
+<meta property="og:title" content="PHP之函数">
+<meta property="og:url" content="https://mochazz.github.io/2017/08/03/php(4)/index.html">
 <meta property="og:site_name" content="Mochazz&#39;s Blog">
-<meta property="og:description" content="最近在学习漏洞环境搭建。虽然说网络上有很多集成的环境，但是我们还是要学会单独安装各组件，并将它们关联起来。">
-<meta property="og:image" content="https://mochazz.github.io/img/LAMP/l1.png">
-<meta property="og:image" content="https://mochazz.github.io/img/LAMP/l2.png">
-<meta property="og:image" content="https://mochazz.github.io/img/LAMP/l3.png">
-<meta property="og:image" content="https://mochazz.github.io/img/LAMP/l4.png">
-<meta property="og:image" content="https://mochazz.github.io/img/LAMP/l5.png">
-<meta property="og:image" content="https://mochazz.github.io/img/LAMP/l6.png">
-<meta property="og:image" content="https://mochazz.github.io/img/LAMP/l7.png">
-<meta property="og:image" content="https://mochazz.github.io/img/LAMP/l8.png">
-<meta property="og:image" content="https://mochazz.github.io/img/LAMP/l9.png">
-<meta property="og:image" content="https://mochazz.github.io/img/LAMP/l10.png">
-<meta property="og:image" content="https://mochazz.github.io/img/LAMP/l11.png">
-<meta property="og:image" content="https://mochazz.github.io/img/LAMP/l12.png">
-<meta property="og:updated_time" content="2017-07-23T10:59:09.574Z">
+<meta property="og:description" content="为了更好的了解web漏洞，开始学习PHP，仅记录自己不熟悉的部分以及PHP的一些特性。">
+<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p1.png">
+<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p2.png">
+<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p3.png">
+<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p4.png">
+<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p5.png">
+<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p6.png">
+<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p7.png">
+<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p8.png">
+<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p9.png">
+<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p10.png">
+<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p11.png">
+<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p12.png">
+<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p13.png">
+<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p14.png">
+<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p15.png">
+<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p16.png">
+<meta property="og:updated_time" content="2017-08-03T08:45:15.482Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="漏洞环境搭建之Linux+Apache+Mysql+PHP">
-<meta name="twitter:description" content="最近在学习漏洞环境搭建。虽然说网络上有很多集成的环境，但是我们还是要学会单独安装各组件，并将它们关联起来。">
-<meta name="twitter:image" content="https://mochazz.github.io/img/LAMP/l1.png">
+<meta name="twitter:title" content="PHP之函数">
+<meta name="twitter:description" content="为了更好的了解web漏洞，开始学习PHP，仅记录自己不熟悉的部分以及PHP的一些特性。">
+<meta name="twitter:image" content="https://mochazz.github.io/img/PHP4/p1.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -68,7 +72,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>漏洞环境搭建之Linux+Apache+Mysql+PHP | Mochazz&#39;s Blog</title>
+<title>PHP之函数 | Mochazz&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -285,11 +289,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-LAMP" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-php(4)" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/07/13/LAMP/" class="article-date">
-      <time datetime="2017-07-13T14:00:00.000Z" itemprop="datePublished">2017-07-13</time>
+      <a href="/2017/08/03/php(4)/" class="article-date">
+      <time datetime="2017-08-03T08:43:00.000Z" itemprop="datePublished">2017-08-03</time>
 </a>
 
 
@@ -304,7 +308,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      漏洞环境搭建之Linux+Apache+Mysql+PHP
+      PHP之函数
     </h1>
   
 
@@ -313,13 +317,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+    <a class="article-category-link" href="/categories/编程语言/">编程语言</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/环境搭建/">环境搭建</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -329,15 +333,17 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><p>Ubuntu16.04<br>apache2<br>MySQL<br>PHP5.6<br>php_cms带有原有数据库文件</p>
-<h3 id="安装apache2"><a href="#安装apache2" class="headerlink" title="安装apache2"></a>安装apache2</h3><p>先更新一下源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apt-get update</div></pre></td></tr></table></figure></p>
-<p>安装apache2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apt-get install apache2 -y</div></pre></td></tr></table></figure></p>
-<p>查看apache是否安装好,下图表示安装成功：<br><img src="/img/LAMP/l1.png" alt=""></p>
-<h3 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h3><p>安装MySQL<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apt-get install mysql-server -y</div></pre></td></tr></table></figure></p>
-<p><img src="/img/LAMP/l2.png" alt=""><br>设置密码:<br><img src="/img/LAMP/l3.png" alt=""><br>再次输入密码确认：<br><img src="/img/LAMP/l4.png" alt=""><br>查看MYSQL是否安装好,下图表示安装成功：<br><img src="/img/LAMP/l5.png" alt=""></p>
-<h3 id="安装php5-6"><a href="#安装php5-6" class="headerlink" title="安装php5.6"></a>安装php5.6</h3><p>这个可要好好说说了，因为这个地方卡了很久。Ubuntu16.04使用apt-get install php命令默认安装的是php7.0，版本太高，对我们网站的源码支持不太好，因为高版本可能弃用某些低版本的函数或者某些函数使用方法发生变化。<br>解决方法：<br>添加带有php5.5的源：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">apt-get install -y language-pack-en-base</div><div class="line">LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php</div><div class="line">add-apt-repository ppa:ondrej/php</div><div class="line">apt-get update</div><div class="line">apt-cache search php5</div><div class="line">apt-get install php5.6-common -y</div><div class="line">apt-get install libapache2-mod-php5.6 -y</div></pre></td></tr></table></figure></p>
-<p>接下来我们需要安装php5.6以及一些php的扩展插件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apt-get install php5.6 php5.6-cgi php5.6-cli php5.6-phpdbg php5.6-fpm php5.6-dev php5.6-common php5.6-curl php5.6-gd php5.6-imap php5.6-intl php5.6-ldap php5.6-mysql php5.6-pspell php5.6-recode php5.6-snmp php5.6-sqlite3 php5.6-sybase php5.6-tidy php5.6-opcache php5.6-json php5.6-bz2 php5.6-mcrypt php5.6-odbc php5.6-readline php5.6-interbase php5.6-xmlrpc php5.6-enchant php5.6-gmp php5.6-xsl php5.6-bcmath php5.6-mbstring php5.6-soap php5.6-xml php5.6-dba</div></pre></td></tr></table></figure></p>
-<p>安装好后，我们将php_cms源码放到/var/www/html目录下：<br><img src="/img/LAMP/l6.png" alt=""><br>给予html文件夹和php_cms的attachment文件夹777权限：<br><img src="/img/LAMP/l7.png" alt=""><br>重启apache服务：<br><img src="/img/LAMP/l8.png" alt=""><br>浏览器访问我们的网站，发现显示拒绝连接数据库：<br><img src="/img/LAMP/l9.png" alt=""><br>这是因为我们之前设置了MySQL密码，所以我们需要修改php_cms的配置文件，配置文件在/var/www/html/include/database.inc.php：<br><img src="/img/LAMP/l10.png" alt=""><br>我们还需在新装的MySQL中创建一个数据库名为cms(上图连接数据库配置文件中数据库名为cms)，并将install.sql数据导入cms库中：<br><img src="/img/LAMP/l11.png" alt=""><br>此时再次打开浏览器，可以看到网站成功搭建起来：<br><img src="/img/LAMP/l12.png" alt=""></p>
+        <h4 id="func-get-args和func-num-args"><a href="#func-get-args和func-num-args" class="headerlink" title="func_get_args和func_num_args"></a>func_get_args和func_num_args</h4><p><img src="/img/PHP4/p1.png" alt=""><br><img src="/img/PHP4/p2.png" alt=""></p>
+<h4 id="按值传参"><a href="#按值传参" class="headerlink" title="按值传参"></a>按值传参</h4><p><img src="/img/PHP4/p3.png" alt=""></p>
+<h4 id="引用传参"><a href="#引用传参" class="headerlink" title="引用传参"></a>引用传参</h4><p><img src="/img/PHP4/p4.png" alt=""></p>
+<h4 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h4><p><img src="/img/PHP4/p5.png" alt=""></p>
+<h4 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h4><p>函数中的变量无特殊声明，则为动态地分配存储空间，在函数调用后将自动释放。<br><img src="/img/PHP4/p6.png" alt=""></p>
+<h4 id="静态变量"><a href="#静态变量" class="headerlink" title="静态变量"></a>静态变量</h4><p>使用static关键字声明，可确保变量的内存地址不变。只有在函数第一次执行时会调用执行static语句，之后调用函数将不再执行。<br><img src="/img/PHP4/p7.png" alt=""></p>
+<h4 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h4><p>使用global声明变量，是全局变量的一个引用，也可以使用$GLOBALS[“var”] = “test”;来声明。<br><img src="/img/PHP4/p8.png" alt=""></p>
+<h4 id="global与-GLOBALS区别"><a href="#global与-GLOBALS区别" class="headerlink" title="global与$GLOBALS区别"></a>global与$GLOBALS区别</h4><p><img src="/img/PHP4/p9.png" alt=""><br>PHP中可以先调用函数，再定义该函数，只不过会有警告，可以用error_reporting(0);屏蔽。用变量存储函数名<br><img src="/img/PHP4/p10.png" alt=""></p>
+<h4 id="文件包含"><a href="#文件包含" class="headerlink" title="文件包含"></a>文件包含</h4><p><img src="/img/PHP4/p11.png" alt=""></p>
+<h4 id="include和require的区别"><a href="#include和require的区别" class="headerlink" title="include和require的区别"></a>include和require的区别</h4><p><img src="/img/PHP4/p12.png" alt=""><br><img src="/img/PHP4/p13.png" alt=""><br>如果要通过文件包含来加载一个函数，在调用函数之前必须先包含该文件，不能先使用在包含，所以一般包含语句都写在PHP程序开头。<br><img src="/img/PHP4/p14.png" alt=""><br><img src="/img/PHP4/p15.png" alt=""><br>PHP不支持函数重载，也就不允许重复包含同一个文件，所以使用include_once()或require_once()可以避免该问题</p>
+<h4 id="PHP模板化"><a href="#PHP模板化" class="headerlink" title="PHP模板化"></a>PHP模板化</h4><p><img src="/img/PHP4/p16.png" alt=""></p>
 
       
     </div>
@@ -346,13 +352,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/07/13/LAMP/">漏洞环境搭建之Linux+Apache+Mysql+PHP</a></p>
+        <p><span>本文标题:</span><a href="/2017/08/03/php(4)/">PHP之函数</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Mochazz</a></p>
-        <p><span>发布时间:</span>2017-07-13, 22:00:00</p>
-        <p><span>最后更新:</span>2017-07-23, 18:59:09</p>
+        <p><span>发布时间:</span>2017-08-03, 16:43:00</p>
+        <p><span>最后更新:</span>2017-08-03, 16:45:15</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/07/13/LAMP/" title="漏洞环境搭建之Linux+Apache+Mysql+PHP">https://mochazz.github.io/2017/07/13/LAMP/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://mochazz.github.io/2017/07/13/LAMP/　　作者: Mochazz" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/08/03/php(4)/" title="PHP之函数">https://mochazz.github.io/2017/08/03/php(4)/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://mochazz.github.io/2017/08/03/php(4)/　　作者: Mochazz" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -364,16 +370,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/07/14/IIS/">
-                    漏洞环境搭建之Windows+IIS6.0+SqlServer+ASP
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/07/10/2017ncstisc/">
-                    2017全国信息安全竞赛 WriteUp
+                <a href="/2017/08/01/php(3)/">
+                    PHP之数组与文件
                 </a>
             </div>
         
@@ -385,7 +385,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#环境准备"><span class="toc-number">1.</span> <span class="toc-text">环境准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装apache2"><span class="toc-number">2.</span> <span class="toc-text">安装apache2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装MySQL"><span class="toc-number">3.</span> <span class="toc-text">安装MySQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装php5-6"><span class="toc-number">4.</span> <span class="toc-text">安装php5.6</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#func-get-args和func-num-args"><span class="toc-number">1.</span> <span class="toc-text">func_get_args和func_num_args</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#按值传参"><span class="toc-number">2.</span> <span class="toc-text">按值传参</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#引用传参"><span class="toc-number">3.</span> <span class="toc-text">引用传参</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#默认参数"><span class="toc-number">4.</span> <span class="toc-text">默认参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#局部变量"><span class="toc-number">5.</span> <span class="toc-text">局部变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#静态变量"><span class="toc-number">6.</span> <span class="toc-text">静态变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#全局变量"><span class="toc-number">7.</span> <span class="toc-text">全局变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#global与-GLOBALS区别"><span class="toc-number">8.</span> <span class="toc-text">global与$GLOBALS区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#文件包含"><span class="toc-number">9.</span> <span class="toc-text">文件包含</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#include和require的区别"><span class="toc-number">10.</span> <span class="toc-text">include和require的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PHP模板化"><span class="toc-number">11.</span> <span class="toc-text">PHP模板化</span></a></li></ol>
         
     </div>
     <style>
@@ -421,7 +421,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"漏洞环境搭建之Linux+Apache+Mysql+PHP　| Mochazz's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"PHP之函数　| Mochazz's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -440,8 +440,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'https://mochazz.github.io/2017/07/13/LAMP/';
-            this.page.identifier = '2017/07/13/LAMP/';
+            this.page.url = 'https://mochazz.github.io/2017/08/03/php(4)/';
+            this.page.identifier = '2017/08/03/php(4)/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -463,15 +463,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/07/14/IIS/" title="上一篇: 漏洞环境搭建之Windows+IIS6.0+SqlServer+ASP">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/07/10/2017ncstisc/" title="下一篇: 2017全国信息安全竞赛 WriteUp">
+            <a href="/2017/08/01/php(3)/" title="下一篇: PHP之数组与文件">
                 <i class="fa fa-angle-right"></i>
             </a>
         
