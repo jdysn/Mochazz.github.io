@@ -38,7 +38,13 @@
 <meta property="og:image" content="https://mochazz.github.io/img/sublinux/l14.png">
 <meta property="og:image" content="https://mochazz.github.io/img/sublinux/l15.png">
 <meta property="og:image" content="https://mochazz.github.io/img/sublinux/l16.png">
-<meta property="og:updated_time" content="2017-07-27T09:20:08.768Z">
+<meta property="og:image" content="https://mochazz.github.io/img/sublinux/l17.png">
+<meta property="og:image" content="https://mochazz.github.io/img/sublinux/l18.png">
+<meta property="og:image" content="https://mochazz.github.io/img/sublinux/l19.png">
+<meta property="og:image" content="https://mochazz.github.io/img/sublinux/l20.png">
+<meta property="og:image" content="https://mochazz.github.io/img/sublinux/l21.png">
+<meta property="og:image" content="https://mochazz.github.io/img/sublinux/l22.png">
+<meta property="og:updated_time" content="2017-08-14T11:52:28.716Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="windows10安装linux子系统">
 <meta name="twitter:description" content="用惯了linux，突然让我使用windows还真有点不习惯，还好windows10可以安装linux子系统。">
@@ -340,6 +346,8 @@
 <pre><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv ED444FF07D8D0BF6
 Executing: /tmp/tmp.A0UNJSF9eW/gpg.1.sh --keyserver
 </code></pre><p><img src="/img/sublinux/l15.png" alt=""><br>成功进入metasploit：<br><img src="/img/sublinux/l16.png" alt=""></p>
+<h3 id="开启图形化界面"><a href="#开启图形化界面" class="headerlink" title="开启图形化界面"></a>开启图形化界面</h3><p>下载安装Xming X Server for Windows，安装之后运行其中的Xlaunch，界面如图：<br><img src="/img/sublinux/l17.png" alt=""><br>编辑.bashrc文件<br>sudo vi ~/.bashrc<br>在文件末尾添加export DISPLAY=:1.0<br>或者直接使用echo “export DISPLAY=:1.0” &gt;&gt; ~/.bashrc命令<br><img src="/img/sublinux/l18.png" alt=""><br>安装xfce4终端<br>sudo apt install xfce4-terminal<br><img src="/img/sublinux/l19.png" alt=""><br>打开firefox浏览器<br>sudo firefox<br><img src="/img/sublinux/l20.png" alt=""><br>sudo xfce4-session<br><img src="/img/sublinux/l21.png" alt=""></p>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>使用nmap的时候发现会出现如下问题<br><img src="/img/sublinux/l22.png" alt=""><br>经过一番查阅资料，发现这是一个未修复的坑，反正所有和网卡或socket有关的命令可能都不能用，有待开发人员解决。不过在windows运行linux已经算是一重大突破，所以还是静候佳音吧。<br><a href="https://github.com/abergs/ubuntuonwindows" target="_blank" rel="external">其他Tips</a></p>
 
       
     </div>
@@ -351,7 +359,7 @@ Executing: /tmp/tmp.A0UNJSF9eW/gpg.1.sh --keyserver
         <p><span>本文标题:</span><a href="/2017/07/27/linux_subsystem/">windows10安装linux子系统</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Mochazz</a></p>
         <p><span>发布时间:</span>2017-07-27, 17:10:00</p>
-        <p><span>最后更新:</span>2017-07-27, 17:20:08</p>
+        <p><span>最后更新:</span>2017-08-14, 19:52:28</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/07/27/linux_subsystem/" title="windows10安装linux子系统">https://mochazz.github.io/2017/07/27/linux_subsystem/</a>
             <span class="copy-path" data-clipboard-text="原文: https://mochazz.github.io/2017/07/27/linux_subsystem/　　作者: Mochazz" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -387,7 +395,7 @@ Executing: /tmp/tmp.A0UNJSF9eW/gpg.1.sh --keyserver
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装linux子系统"><span class="toc-number">1.</span> <span class="toc-text">安装linux子系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#错误解决"><span class="toc-number">2.</span> <span class="toc-text">错误解决</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置自己的Bash-banner"><span class="toc-number">3.</span> <span class="toc-text">设置自己的Bash banner</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装metasploit"><span class="toc-number">4.</span> <span class="toc-text">安装metasploit</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装linux子系统"><span class="toc-number">1.</span> <span class="toc-text">安装linux子系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#错误解决"><span class="toc-number">2.</span> <span class="toc-text">错误解决</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置自己的Bash-banner"><span class="toc-number">3.</span> <span class="toc-text">设置自己的Bash banner</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装metasploit"><span class="toc-number">4.</span> <span class="toc-text">安装metasploit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开启图形化界面"><span class="toc-number">5.</span> <span class="toc-text">开启图形化界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#后记"><span class="toc-number">6.</span> <span class="toc-text">后记</span></a></li></ol>
         
     </div>
     <style>
