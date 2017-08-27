@@ -22,12 +22,23 @@
 <meta property="og:url" content="https://mochazz.github.io/2017/07/26/hexo-build/index.html">
 <meta property="og:site_name" content="Mochazz&#39;s Blog">
 <meta property="og:description" content="由于某些原因，电脑要装回windows，之前博客一直搭建在Linux平台下，搭建过程也没记录，借此机会简单记录一下。">
+<meta property="og:image" content="https://mochazz.github.io/img/hexo/h17.png">
+<meta property="og:image" content="https://mochazz.github.io/img/hexo/h18.png">
+<meta property="og:image" content="https://mochazz.github.io/img/hexo/h19.png">
+<meta property="og:image" content="https://mochazz.github.io/img/hexo/h20.png">
+<meta property="og:image" content="https://mochazz.github.io/img/hexo/h21.png">
+<meta property="og:image" content="https://mochazz.github.io/img/hexo/h22.png">
+<meta property="og:image" content="https://mochazz.github.io/img/hexo/h23.png">
+<meta property="og:image" content="https://mochazz.github.io/img/hexo/h24.png">
+<meta property="og:image" content="https://mochazz.github.io/img/hexo/h25.png">
+<meta property="og:image" content="https://mochazz.github.io/img/hexo/h26.png">
 <meta property="og:image" content="https://mochazz.github.io/img/hexo/h1.png">
 <meta property="og:image" content="https://mochazz.github.io/img/hexo/h2.png">
 <meta property="og:image" content="https://mochazz.github.io/img/hexo/h3.png">
 <meta property="og:image" content="https://mochazz.github.io/img/hexo/h4.png">
 <meta property="og:image" content="https://mochazz.github.io/img/hexo/h5.png">
 <meta property="og:image" content="https://mochazz.github.io/img/hexo/h6.png">
+<meta property="og:image" content="https://mochazz.github.io/img/hexo/h16.png">
 <meta property="og:image" content="https://mochazz.github.io/img/hexo/h7.png">
 <meta property="og:image" content="https://mochazz.github.io/img/hexo/h8.png">
 <meta property="og:image" content="https://mochazz.github.io/img/hexo/h9.png">
@@ -37,11 +48,11 @@
 <meta property="og:image" content="https://mochazz.github.io/img/hexo/h13.png">
 <meta property="og:image" content="https://mochazz.github.io/img/hexo/h14.png">
 <meta property="og:image" content="https://mochazz.github.io/img/hexo/h15.png">
-<meta property="og:updated_time" content="2017-07-26T08:25:51.235Z">
+<meta property="og:updated_time" content="2017-08-27T03:40:27.027Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo+github部署自己的博客">
 <meta name="twitter:description" content="由于某些原因，电脑要装回windows，之前博客一直搭建在Linux平台下，搭建过程也没记录，借此机会简单记录一下。">
-<meta name="twitter:image" content="https://mochazz.github.io/img/hexo/h1.png">
+<meta name="twitter:image" content="https://mochazz.github.io/img/hexo/h17.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -332,9 +343,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装<a href="https://git-scm.com/download" target="_blank" rel="external">git</a></h3><p><img src="/img/hexo/h1.png" alt=""></p>
+        <h3 id="开启github-pages"><a href="#开启github-pages" class="headerlink" title="开启github pages"></a>开启github pages</h3><p>先注册一个github账号<br><img src="/img/hexo/h17.png" alt=""><br><img src="/img/hexo/h18.png" alt=""><br><img src="/img/hexo/h19.png" alt=""><br>然后先登录你之前注册账号时用的邮箱，认证之后，选择新建仓库<br><img src="/img/hexo/h20.png" alt=""><br><img src="/img/hexo/h21.png" alt=""><br>找到settings，往下拉到GitHub Pages<br><img src="/img/hexo/h22.png" alt=""><br><img src="/img/hexo/h23.png" alt=""><br><img src="/img/hexo/h24.png" alt=""><br><img src="/img/hexo/h25.png" alt=""><br>这样，我们的blog首页就做好了<br><img src="/img/hexo/h26.png" alt=""><br><a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo主题链接</a></p>
+<h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装<a href="https://git-scm.com/download" target="_blank" rel="external">git</a></h3><p><img src="/img/hexo/h1.png" alt=""></p>
 <h3 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装<a href="http://nodejs.org/" target="_blank" rel="external">nodejs</a></h3><p><img src="/img/hexo/h2.png" alt=""><br>这里没有什么好说明的，直接默认下一步安装就好。</p>
-<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>创建一个用于存放hexo组件的目录，我这里创建一个blog目录为例，进入创建好的blogs目录，右键选择git bash here<br><img src="/img/hexo/h3.png" alt=""><br>使用npm安装hexo客户端：<br>npm install hexo-cli -g<br><img src="/img/hexo/h4.png" alt=""><br>下载好hexo后，初始化：<br>hexo init<br><img src="/img/hexo/h5.png" alt=""><br>使用hexo -v查看所安装的hexo版本，使用hexo h查看帮助文档：<br><img src="/img/hexo/h6.png" alt=""><br>使用hexo s在本地4000端口开启服务，浏览器访问<a href="http://127.0.0.1:4000即可看到我们的博客首页：" target="_blank" rel="external">http://127.0.0.1:4000即可看到我们的博客首页：</a><br><img src="/img/hexo/h7.png" alt=""><br><img src="/img/hexo/h8.png" alt=""><br>这样就算搭建成功，如果需要发布自己的博文，需要先用markdown语法来写你的博文并保存成.md格式文件，然后放到blogs\source_posts目录下。<br>本地查看博文效果使用hexo s，要部署到到github page上的话使用hexo g &amp;&amp; hexo d然后根据提示输入你的github账号密码即可。<br>下面这是我的博文：<br><img src="/img/hexo/h9.png" alt=""><br><a href="http://www.appinn.com/markdown/" target="_blank" rel="external">Markdown</a>语法大致这样：<br><img src="/img/hexo/h10.png" alt=""></p>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>创建一个用于存放hexo组件的目录，我这里创建一个blog目录为例，进入创建好的blogs目录，右键选择git bash here<br><img src="/img/hexo/h3.png" alt=""><br>使用npm安装hexo客户端：<br>npm install hexo-cli -g<br><img src="/img/hexo/h4.png" alt=""><br>下载好hexo后，初始化：<br>hexo init<br><img src="/img/hexo/h5.png" alt=""><br>使用hexo -v查看所安装的hexo版本，使用hexo h查看帮助文档：<br><img src="/img/hexo/h6.png" alt=""><br>打开本地博客根目录下的 _config.yml 文件，最下面找到 Deployment<br><img src="/img/hexo/h16.png" alt=""><br>使用hexo s在本地4000端口开启服务，浏览器访问<a href="http://127.0.0.1:4000即可看到我们的博客首页：" target="_blank" rel="external">http://127.0.0.1:4000即可看到我们的博客首页：</a><br><img src="/img/hexo/h7.png" alt=""><br><img src="/img/hexo/h8.png" alt=""><br>这样就算搭建成功，如果需要发布自己的博文，需要先用markdown语法来写你的博文并保存成.md格式文件，然后放到blogs\source_posts目录下。<br>本地查看博文效果使用hexo s，要部署到到github page上的话使用hexo g &amp;&amp; hexo d然后根据提示输入你的github账号密码即可。<br>下面这是我的博文：<br><img src="/img/hexo/h9.png" alt=""><br><a href="http://www.appinn.com/markdown/" target="_blank" rel="external">Markdown</a>语法大致这样：<br><img src="/img/hexo/h10.png" alt=""></p>
 <h3 id="遇到的错误"><a href="#遇到的错误" class="headerlink" title="遇到的错误"></a>遇到的错误</h3><p>错误一：找不到git<br><img src="/img/hexo/h11.png" alt=""><br>解决方法：<br>npm install hexo-deployer-git –save<br><img src="/img/hexo/h12.png" alt=""><br>错误二：无法自动检测邮箱<br><img src="/img/hexo/h13.png" alt=""><br>解决方法：<br>设置一下邮箱就好，邮箱必须是你注册github时绑定的那个邮箱<br>git config –global user.email “youmail@163.com”<br>接下来就可以正常将你的博客部署到github上了。<br>了解hexo各个参数更详细的使用方法<br><img src="/img/hexo/h14.png" alt=""><br><img src="/img/hexo/h15.png" alt=""></p>
 
       
@@ -347,7 +359,7 @@
         <p><span>本文标题:</span><a href="/2017/07/26/hexo-build/">使用hexo+github部署自己的博客</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Mochazz</a></p>
         <p><span>发布时间:</span>2017-07-26, 16:00:00</p>
-        <p><span>最后更新:</span>2017-07-26, 16:25:51</p>
+        <p><span>最后更新:</span>2017-08-27, 11:40:27</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/07/26/hexo-build/" title="使用hexo+github部署自己的博客">https://mochazz.github.io/2017/07/26/hexo-build/</a>
             <span class="copy-path" data-clipboard-text="原文: https://mochazz.github.io/2017/07/26/hexo-build/　　作者: Mochazz" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -383,7 +395,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装git"><span class="toc-number">1.</span> <span class="toc-text">安装git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装nodejs"><span class="toc-number">2.</span> <span class="toc-text">安装nodejs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装hexo"><span class="toc-number">3.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#遇到的错误"><span class="toc-number">4.</span> <span class="toc-text">遇到的错误</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#开启github-pages"><span class="toc-number">1.</span> <span class="toc-text">开启github pages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装git"><span class="toc-number">2.</span> <span class="toc-text">安装git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装nodejs"><span class="toc-number">3.</span> <span class="toc-text">安装nodejs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装hexo"><span class="toc-number">4.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#遇到的错误"><span class="toc-number">5.</span> <span class="toc-text">遇到的错误</span></a></li></ol>
         
     </div>
     <style>
