@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>2017广东省强网杯Web全解 | Mochazz&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Mochazz,Mochazz's Blog" />
+  
+  <meta name="description" content="周末打了一场CTF，只做了Web部分，学到不少东西，不过Web题量太少了，两天才4题。下面是具体解题思路。">
+<meta name="keywords" content="CTF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2017广东省强网杯Web全解">
+<meta property="og:url" content="https://mochazz.github.io/2017/09/11/QWBCTF/index.html">
+<meta property="og:site_name" content="Mochazz&#39;s Blog">
+<meta property="og:description" content="周末打了一场CTF，只做了Web部分，学到不少东西，不过Web题量太少了，两天才4题。下面是具体解题思路。">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image1.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image2.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image3.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image4.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image29.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image5.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image6.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image7.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image8.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image9.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image10.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image11.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image12.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image13.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image14.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image15.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image16.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image17.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image18.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image19.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image20.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image21.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image22.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image23.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image24.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image25.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image26.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image27.png">
+<meta property="og:image" content="https://mochazz.github.io/img/QWBCTF/image28.png">
+<meta property="og:updated_time" content="2017-09-11T07:23:27.274Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2017广东省强网杯Web全解">
+<meta name="twitter:description" content="周末打了一场CTF，只做了Web部分，学到不少东西，不过Web题量太少了，两天才4题。下面是具体解题思路。">
+<meta name="twitter:image" content="https://mochazz.github.io/img/QWBCTF/image1.png">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Mochazz&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Mochazz&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        记录自己的成长之路
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-QWBCTF" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      2017广东省强网杯Web全解
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/CTF竞赛训练/">CTF竞赛训练</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-09-11
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h3 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h3><p><img src="/img/QWBCTF/image1.png" alt=""><br>题目给了一个损坏的jsfuck，修复一下解密即可，将开头<code>[[</code>改成<code>[][</code>,然后转换成代码即可看到flag。注意这里不要将代码直接放在控制台运行，因为flag被赋值给一个变量了。<br><img src="/img/QWBCTF/image2.png" alt=""><br><img src="/img/QWBCTF/image3.png" alt=""><br>解密地址：<a href="https://enkhee-osiris.github.io/Decoder-JSFuck/" target="_blank" rel="external">https://enkhee-osiris.github.io/Decoder-JSFuck/</a></p>
+<h3 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h3><p>访问链接，发现被禁止访问，抓包发现，role参数有点奇怪role=Zjo1OiJ0aHJmZyI7<br><img src="/img/QWBCTF/image4.png" alt=""><br><img src="/img/QWBCTF/image29.png" alt=""><br><img src="/img/QWBCTF/image5.png" alt=""><br>根据题目提示我是谁？我在哪？我要干什么？将s:5”admin”进行rot13加密再base64加密发送数据包，就以admin身份登录进来了。<br><img src="/img/QWBCTF/image6.png" alt=""><br>查看网页源代码发现需要POST数据给服务器<br><img src="/img/QWBCTF/image7.png" alt=""><br>那就随便POST数据filename=test1.php&amp;data=&lt;?php phpinfo(); ?&gt;发现被拦截，但是POST数据filename=test1.txt&amp;data=&lt;?php phpinfo(); ?&gt;可以，而且给出了路径，也可以访问到。这里应该是做了限制。可以猜测后台代码使用了file_put_contents()函数，于是根据PHP手册介绍，第二个参数可以是数组<br><img src="/img/QWBCTF/image8.png" alt=""><br>如果第二个参数传入的是数组，则会将他们以字符串的形式拼接起来，测试如下：<br><img src="/img/QWBCTF/image9.png" alt=""><br>获取路径后访问既得flag<br><img src="/img/QWBCTF/image10.png" alt=""><br><img src="/img/QWBCTF/image11.png" alt=""></p>
+<h3 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h3><p>考察sql二次注入，随便注册即可登录，登录后发现有个check按键可以查询有多少人的号码和你一样，这样必定要用到电话号码，并查询数据库，而电话号码只能是数字。所以，思路就是将sql语句转换成16进制进行注册，这样在查询的时候就会执行我们构造的sql语句<br><img src="/img/QWBCTF/image12.png" alt=""><br><img src="/img/QWBCTF/image13.png" alt=""><br><img src="/img/QWBCTF/image14.png" alt=""><br><img src="/img/QWBCTF/image15.png" alt=""><br><img src="/img/QWBCTF/image16.png" alt=""><br><img src="/img/QWBCTF/image17.png" alt=""><br><img src="/img/QWBCTF/image18.png" alt=""><br><img src="/img/QWBCTF/image19.png" alt=""><br><img src="/img/QWBCTF/image20.png" alt=""><br><img src="/img/QWBCTF/image21.png" alt=""><br><img src="/img/QWBCTF/image22.png" alt=""></p>
+<h3 id="第四题"><a href="#第四题" class="headerlink" title="第四题"></a>第四题</h3><p>考察jinjia2模板注入<br>注册完后，在donate.php处可以填写图片url，以及用户名。随便填报错，发现使用后台了jinja2模板。<br><img src="/img/QWBCTF/image23.png" alt=""><br><img src="/img/QWBCTF/image24.png" alt=""><br>google一下，get姿势，具体看这篇文章：CSAW-CTF Python sandbox write-up<br><img src="/img/QWBCTF/image25.png" alt=""><br>下面思路就是用python语句进行命令执行，当然后台过滤了一些关键词<br><img src="/img/QWBCTF/image26.png" alt=""><br><img src="/img/QWBCTF/image27.png" alt=""><br><img src="/img/QWBCTF/image28.png" alt=""><br>jinja2注入参考文章：<br><a href="https://hexplo.it/escaping-the-csawctf-python-sandbox/" target="_blank" rel="external">CSAW-CTF Python sandbox write-up</a><br><a href="http://rickgray.me/2016/02/24/use-python-features-to-execute-arbitrary-codes-in-jinja2-templates.html" target="_blank" rel="external">利用 Python 特性在 Jinja2 模板中执行任意代码</a></p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2017年09月11日 15:23</p>
+        <p>原始链接： <a class="post-url" href="/2017/09/11/QWBCTF/" title="2017广东省强网杯Web全解">https://mochazz.github.io/2017/09/11/QWBCTF/</a></p>
+        <footer>
+            <a href="https://mochazz.github.io">
+                <img src="/images/logo.png" alt="Mochazz">
+                Mochazz
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+    </div>
+    <footer class="article-footer">
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/CTF/" class="color4">CTF</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第一题"><span class="post-toc-text">第一题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第二题"><span class="post-toc-text">第二题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第三题"><span class="post-toc-text">第三题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第四题"><span class="post-toc-text">第四题</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/11/DDOS1/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">DDOS原理与防御</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2017 Mochazz<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "https://mochazz.github.io",
+      animate: true,
+      isHome: false
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/CTF竞赛训练/">CTF竞赛训练</a><a class="category-link" href="/categories/Linux/">Linux</a><a class="category-link" href="/categories/Web安全/">Web安全</a><a class="category-link" href="/categories/Windows/">Windows</a><a class="category-link" href="/categories/linux/">linux</a><a class="category-link" href="/categories/ss搭建/">ss搭建</a><a class="category-link" href="/categories/博客搭建/">博客搭建</a><a class="category-link" href="/categories/拒绝服务/">拒绝服务</a><a class="category-link" href="/categories/文章/">文章</a><a class="category-link" href="/categories/服务安全/">服务安全</a><a class="category-link" href="/categories/渗透测试/">渗透测试</a><a class="category-link" href="/categories/系统安全/">系统安全</a><a class="category-link" href="/categories/编程语言/">编程语言</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/CTF/" style="font-size: 16.67px;">CTF</a> <a href="/tags/DDOS/" style="font-size: 13.33px;">DDOS</a> <a href="/tags/PHP/" style="font-size: 20px;">PHP</a> <a href="/tags/linux子系统/" style="font-size: 10px;">linux子系统</a> <a href="/tags/ms15-034/" style="font-size: 10px;">ms15-034</a> <a href="/tags/ms17-010/" style="font-size: 10px;">ms17-010</a> <a href="/tags/windows/" style="font-size: 13.33px;">windows</a> <a href="/tags/windows安装hexo/" style="font-size: 10px;">windows安装hexo</a> <a href="/tags/后门/" style="font-size: 10px;">后门</a> <a href="/tags/安装linux系统/" style="font-size: 10px;">安装linux系统</a> <a href="/tags/工具使用/" style="font-size: 10px;">工具使用</a> <a href="/tags/思考认知/" style="font-size: 10px;">思考认知</a> <a href="/tags/文件上传/" style="font-size: 10px;">文件上传</a> <a href="/tags/木马/" style="font-size: 10px;">木马</a> <a href="/tags/环境搭建/" style="font-size: 13.33px;">环境搭建</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div id="mobile-header-menu-container">
+        <span class="title">Menu</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+  </div>
+</body>
+</html>
