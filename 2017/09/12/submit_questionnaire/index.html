@@ -3,39 +3,38 @@
 <head>
   <meta charset="utf-8">
   
-  <title>PHP之函数 | Mochazz&#39;s Blog</title>
+  <title>python实现自动填写调查问卷 | Mochazz&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Mochazz,Mochazz's Blog" />
   
-  <meta name="description" content="为了更好的了解web漏洞，开始学习PHP，仅记录自己不熟悉的部分以及PHP的一些特性。">
-<meta name="keywords" content="PHP">
+  <meta name="description" content="看我如何使用python优雅地填写调查问卷。">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PHP之函数">
-<meta property="og:url" content="https://mochazz.github.io/2017/08/03/php(4)/index.html">
+<meta property="og:title" content="python实现自动填写调查问卷">
+<meta property="og:url" content="https://mochazz.github.io/2017/09/12/submit_questionnaire/index.html">
 <meta property="og:site_name" content="Mochazz&#39;s Blog">
-<meta property="og:description" content="为了更好的了解web漏洞，开始学习PHP，仅记录自己不熟悉的部分以及PHP的一些特性。">
-<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p1.png">
-<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p2.png">
-<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p3.png">
-<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p4.png">
-<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p5.png">
-<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p6.png">
-<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p7.png">
-<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p8.png">
-<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p9.png">
-<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p10.png">
-<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p11.png">
-<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p12.png">
-<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p13.png">
-<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p14.png">
-<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p15.png">
-<meta property="og:image" content="https://mochazz.github.io/img/PHP4/p16.png">
-<meta property="og:updated_time" content="2017-09-07T01:41:32.618Z">
+<meta property="og:description" content="看我如何使用python优雅地填写调查问卷。">
+<meta property="og:image" content="https://mochazz.github.io/img/submit_questionnaire/p1.png">
+<meta property="og:image" content="https://mochazz.github.io/img/submit_questionnaire/p2.png">
+<meta property="og:image" content="https://mochazz.github.io/img/submit_questionnaire/p3.png">
+<meta property="og:image" content="https://mochazz.github.io/img/submit_questionnaire/p4.png">
+<meta property="og:image" content="https://mochazz.github.io/img/submit_questionnaire/p5.png">
+<meta property="og:image" content="https://mochazz.github.io/img/submit_questionnaire/p6.png">
+<meta property="og:image" content="https://mochazz.github.io/img/submit_questionnaire/p7.png">
+<meta property="og:image" content="https://mochazz.github.io/img/submit_questionnaire/p8.png">
+<meta property="og:image" content="https://mochazz.github.io/img/submit_questionnaire/p9.png">
+<meta property="og:image" content="https://mochazz.github.io/img/submit_questionnaire/p10.png">
+<meta property="og:image" content="https://mochazz.github.io/img/submit_questionnaire/p11.png">
+<meta property="og:image" content="https://mochazz.github.io/img/submit_questionnaire/p12.png">
+<meta property="og:image" content="https://mochazz.github.io/img/submit_questionnaire/p13.png">
+<meta property="og:image" content="https://mochazz.github.io/img/submit_questionnaire/p14.png">
+<meta property="og:image" content="https://mochazz.github.io/img/submit_questionnaire/p15.png">
+<meta property="og:updated_time" content="2017-09-12T07:56:02.285Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PHP之函数">
-<meta name="twitter:description" content="为了更好的了解web漏洞，开始学习PHP，仅记录自己不熟悉的部分以及PHP的一些特性。">
-<meta name="twitter:image" content="https://mochazz.github.io/img/PHP4/p1.png">
+<meta name="twitter:title" content="python实现自动填写调查问卷">
+<meta name="twitter:description" content="看我如何使用python优雅地填写调查问卷。">
+<meta name="twitter:image" content="https://mochazz.github.io/img/submit_questionnaire/p1.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -114,14 +113,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-php(4)" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-submit_questionnaire" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      PHP之函数
+      python实现自动填写调查问卷
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -134,7 +133,7 @@
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2017-08-03
+          <i class="fa fa-calendar"></i>  2017-09-12
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -150,22 +149,14 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h4 id="func-get-args和func-num-args"><a href="#func-get-args和func-num-args" class="headerlink" title="func_get_args和func_num_args"></a>func_get_args和func_num_args</h4><p><img src="/img/PHP4/p1.png" alt=""><br><img src="/img/PHP4/p2.png" alt=""></p>
-<h4 id="按值传参"><a href="#按值传参" class="headerlink" title="按值传参"></a>按值传参</h4><p><img src="/img/PHP4/p3.png" alt=""></p>
-<h4 id="引用传参"><a href="#引用传参" class="headerlink" title="引用传参"></a>引用传参</h4><p><img src="/img/PHP4/p4.png" alt=""></p>
-<h4 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h4><p><img src="/img/PHP4/p5.png" alt=""></p>
-<h4 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h4><p>函数中的变量无特殊声明，则为动态地分配存储空间，在函数调用后将自动释放。<br><img src="/img/PHP4/p6.png" alt=""></p>
-<h4 id="静态变量"><a href="#静态变量" class="headerlink" title="静态变量"></a>静态变量</h4><p>使用static关键字声明，可确保变量的内存地址不变。只有在函数第一次执行时会调用执行static语句，之后调用函数将不再执行。<br><img src="/img/PHP4/p7.png" alt=""></p>
-<h4 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h4><p>使用global声明变量，是全局变量的一个引用，也可以使用$GLOBALS[“var”] = “test”;来声明。<br><img src="/img/PHP4/p8.png" alt=""></p>
-<h4 id="global与-GLOBALS区别"><a href="#global与-GLOBALS区别" class="headerlink" title="global与$GLOBALS区别"></a>global与$GLOBALS区别</h4><p><img src="/img/PHP4/p9.png" alt=""><br>PHP中可以先调用函数，再定义该函数，只不过会有警告，可以用error_reporting(0);屏蔽。用变量存储函数名<br><img src="/img/PHP4/p10.png" alt=""></p>
-<h4 id="文件包含"><a href="#文件包含" class="headerlink" title="文件包含"></a>文件包含</h4><p><img src="/img/PHP4/p11.png" alt=""></p>
-<h4 id="include和require的区别"><a href="#include和require的区别" class="headerlink" title="include和require的区别"></a>include和require的区别</h4><p><img src="/img/PHP4/p12.png" alt=""><br><img src="/img/PHP4/p13.png" alt=""><br>如果要通过文件包含来加载一个函数，在调用函数之前必须先包含该文件，不能先使用在包含，所以一般包含语句都写在PHP程序开头。<br><img src="/img/PHP4/p14.png" alt=""><br><img src="/img/PHP4/p15.png" alt=""><br>PHP不支持函数重载，也就不允许重复包含同一个文件，所以使用include_once()或require_once()可以避免该问题</p>
-<h4 id="PHP模板化"><a href="#PHP模板化" class="headerlink" title="PHP模板化"></a>PHP模板化</h4><p><img src="/img/PHP4/p16.png" alt=""></p>
+            <h3 id="0X00前言"><a href="#0X00前言" class="headerlink" title="0X00前言"></a>0X00前言</h3><p>快开学了，看到空间里面各种求填写调查问卷的，我才想起来貌似我也还没做。对于这种无意义的问卷，我是不怎么感冒的，所以我打算使用”特技”来完成，也就是python，顺便重新复习一下python，真的好久没用了。下面，表演开始……</p>
+<h3 id="0X01代码编写思路"><a href="#0X01代码编写思路" class="headerlink" title="0X01代码编写思路"></a>0X01代码编写思路</h3><p>首先先创建一份问卷<br><img src="/img/submit_questionnaire/p1.png" alt=""><br><img src="/img/submit_questionnaire/p2.png" alt=""><br>对于截获的数据包进行分析，有的被url编码了不利于分析，可以使用Burpsuite编码模块解码替换，这样就好分析了<br><img src="/img/submit_questionnaire/p3.png" alt=""><br><img src="/img/submit_questionnaire/p4.png" alt=""><br><img src="/img/submit_questionnaire/p5.png" alt=""><br>通过观察可以发现，post了一串奇怪的数据<code>submitdata=1$2}2$3}3$3}4$4}5$3}6$2}7$4}8$2}9$3}10$3</code>。仔细分析可看出数据大概是这个意思<code>submitdata=题号$选项号}题号$选项号}题号$选项号}</code>……..<br>利用这些信息就可以开始编写python程序了<br><img src="/img/submit_questionnaire/p6.png" alt=""><br>运行结果如下<br><img src="/img/submit_questionnaire/p7.png" alt=""><br>貌似网站还有其他反爬虫机制，在连续提交几个表单之后，就出现了验证码。难道此时我们还要给程序添加上识别验证码的功能？其实不必，我们可以先分析一下刚刚Burpsuite截获的header信息，来看看到底网站是通过什么方式，识别出我们是用爬虫来提交问卷的。<br><img src="/img/submit_questionnaire/p8.png" alt=""><br><img src="/img/submit_questionnaire/p9.png" alt=""><br>通过一番测试，我发现当我连续提交3份问卷，再换一个IP提交3个问卷，也就是连续提交了6份问卷，并没有触发网站的反爬虫机制。所以我们可以猜测对方基于IP提交问卷的频率来识别爬虫程序的。看到这里，大家可能会想，我们可以通过网上的免费代理来提交问卷。例如这些<br><img src="/img/submit_questionnaire/p10.png" alt=""><br>那是不是意味着我们还要往python代码中添加提取免费代理IP的功能呢？NO NO NO！换个思路，在CTF比赛中会遇到一种题目，例如你的IP是来自德国的才可以拿到flag。所以，我们的思路就是进行数据包头欺骗，伪造我们的IP，骗过服务器。下面来说说伪造IP的几种方式。<br>X-Client-IP:1.1.1.1<br>X-Remote-IP:2.2.2.2<br>X-Remote-Addr:3.3.3.3<br>X-Originating-IP:4.4.4.4<br>X-Forwarded-For:5.5.5.5<br>我们每个都尝试一下，然后在后台统计那里可以看到我们的问卷来源<br><img src="/img/submit_questionnaire/p11.png" alt=""><br>这里我们发现用X-Forwarded-For可以绕过，按我们就用这种方法在header信息中添加X-Forwarded-For字段，所以修改后的脚本如下<br><img src="/img/submit_questionnaire/p12.png" alt=""><br>运行结果如下<br><img src="/img/submit_questionnaire/p13.png" alt=""><br>再到后台看看统计信息<br><img src="/img/submit_questionnaire/p14.png" alt=""><br><img src="/img/submit_questionnaire/p15.png" alt=""><br>至此，我们算是完美的解决任务了。如果大家想去掉调查问卷中国外的IP地址，可以收集一下中国的IP地址段，然后添加进程序，处理一下即可。</p>
+<h3 id="0X02总结"><a href="#0X02总结" class="headerlink" title="0X02总结"></a>0X02总结</h3><p>大家平常可以把学到的东西用到实际生活中，遇到困难的时候不要慌，多思考，找到最优的解决方法。例如上面,我并没有在代码中添加验证码识别模块，也没有通过走代理的方式来绕过网站的反爬虫机制，并且使用所学的安全知识(HTTP头欺骗)轻松解决问题，使用最短的代码完美完成任务。<br>PS：如果有什么更好的欺骗方法，欢迎交流，也欢迎来访问我的个人blog：<a href="https://mochazz.github.io">https://mochazz.github.io</a></p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2017年09月07日 09:41</p>
-        <p>原始链接： <a class="post-url" href="/2017/08/03/php(4)/" title="PHP之函数">https://mochazz.github.io/2017/08/03/php(4)/</a></p>
+        <p>最后更新： 2017年09月12日 15:56</p>
+        <p>原始链接： <a class="post-url" href="/2017/09/12/submit_questionnaire/" title="python实现自动填写调查问卷">https://mochazz.github.io/2017/09/12/submit_questionnaire/</a></p>
         <footer>
             <a href="https://mochazz.github.io">
                 <img src="/images/logo.png" alt="Mochazz">
@@ -184,7 +175,7 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/PHP/" class="color4">PHP</a>
+    <a href="/tags/python/" class="color2">python</a>
       
   </li>
 
@@ -197,26 +188,16 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#func-get-args和func-num-args"><span class="post-toc-text">func_get_args和func_num_args</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#按值传参"><span class="post-toc-text">按值传参</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#引用传参"><span class="post-toc-text">引用传参</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#默认参数"><span class="post-toc-text">默认参数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#局部变量"><span class="post-toc-text">局部变量</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#静态变量"><span class="post-toc-text">静态变量</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#全局变量"><span class="post-toc-text">全局变量</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#global与-GLOBALS区别"><span class="post-toc-text">global与$GLOBALS区别</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#文件包含"><span class="post-toc-text">文件包含</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#include和require的区别"><span class="post-toc-text">include和require的区别</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#PHP模板化"><span class="post-toc-text">PHP模板化</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0X00前言"><span class="post-toc-text">0X00前言</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0X01代码编写思路"><span class="post-toc-text">0X01代码编写思路</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0X02总结"><span class="post-toc-text">0X02总结</span></a></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2017/08/13/php(5)/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          PHP之面向对象
-        
-      </span>
-    </a>
   
-  
-    <a href="/2017/08/01/php(3)/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">PHP之数组与文件</span>
+    <a href="/2017/09/12/EBsql/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Error Based Sql Injections</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
