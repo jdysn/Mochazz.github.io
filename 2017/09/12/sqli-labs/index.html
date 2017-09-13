@@ -30,7 +30,8 @@
 <meta property="og:image" content="https://mochazz.github.io/img/sqli-labs/image13.png">
 <meta property="og:image" content="https://mochazz.github.io/img/sqli-labs/image14.png">
 <meta property="og:image" content="https://mochazz.github.io/img/sqli-labs/image15.png">
-<meta property="og:updated_time" content="2017-09-11T23:51:47.347Z">
+<meta property="og:image" content="https://mochazz.github.io/img/sqli-labs/image16.png">
+<meta property="og:updated_time" content="2017-09-13T23:06:44.964Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sqli-labs环境搭建及数据库基础">
 <meta name="twitter:description" content="简介SQLI-LABS是集成了多种SQL注入类型的漏洞测试环境，可以用来学习不同类型的SQL注入。1、Error Based Sql Injections - Union select type.2、Error Based Sql Injections - Double Query type.3、Boolian Based Blind Injections.4、Time Based Blind I">
@@ -155,10 +156,12 @@
 <h3 id="SQL注入一般流程"><a href="#SQL注入一般流程" class="headerlink" title="SQL注入一般流程"></a>SQL注入一般流程</h3><p>猜数据库名<br><img src="/img/sqli-labs/image11.png" alt=""><br>猜表名<br><img src="/img/sqli-labs/image12.png" alt=""><br>猜列名<br><img src="/img/sqli-labs/image13.png" alt=""><br>猜某个字段的内容<br><img src="/img/sqli-labs/image14.png" alt=""></p>
 <h3 id="Mysql函数"><a href="#Mysql函数" class="headerlink" title="Mysql函数"></a>Mysql函数</h3><h4 id="系统常用函数"><a href="#系统常用函数" class="headerlink" title="系统常用函数"></a>系统常用函数</h4><p>user()——数据库用户名<br>database()——数据库名<br>version()——MySQL版本<br>@@datadir——数据库路径<br>@@version_compile_os——操作系统版本</p>
 <h4 id="连接字符串函数"><a href="#连接字符串函数" class="headerlink" title="连接字符串函数"></a>连接字符串函数</h4><p>concat(str1,str2,str3),返回str1+str2+str3;当有一个字符串为NULL时，即返回NULL<br>例如select concat(id,’,’,name) as con from info limit 1;<br>concat_ws(separator,str1,str2,str3),返回str1+separator+str2+separator+str3<br>例如select concat_ws(’,’,id,name) as con from info limit 1;<br>group_concat（str1,str2,str3）,返回str1+str2+str3;<br><img src="/img/sqli-labs/image15.png" alt=""></p>
-<h4 id="其他字符串处理函数"><a href="#其他字符串处理函数" class="headerlink" title="其他字符串处理函数"></a>其他字符串处理函数</h4>
+<h4 id="其他字符串处理函数"><a href="#其他字符串处理函数" class="headerlink" title="其他字符串处理函数"></a>其他字符串处理函数</h4><p>ascii(a)将a转换成其ASCII值<br>ord(a)将a转换成其ASCII值<br>left(a,b)从左往右截取字符串a的前b个字符<br>substr(a,b,c)从b位置开始，截取字符串a的c长度<br>mid(a,b,c)从位置b开始，截取a字符串的c位</p>
+<h4 id="regexp、like语句"><a href="#regexp、like语句" class="headerlink" title="regexp、like语句"></a>regexp、like语句</h4><p>结果正确，则返回1；否则，返回0<br><img src="/img/sqli-labs/image16.png" alt=""></p>
+
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2017年09月12日 07:51</p>
+        <p>最后更新： 2017年09月14日 07:06</p>
         <p>原始链接： <a class="post-url" href="/2017/09/12/sqli-labs/" title="sqli-labs环境搭建及数据库基础">https://mochazz.github.io/2017/09/12/sqli-labs/</a></p>
         <footer>
             <a href="https://mochazz.github.io">
@@ -191,7 +194,7 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简介"><span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#环境搭建"><span class="post-toc-text">环境搭建</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据库基础知识"><span class="post-toc-text">数据库基础知识</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SQL注入一般流程"><span class="post-toc-text">SQL注入一般流程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Mysql函数"><span class="post-toc-text">Mysql函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#系统常用函数"><span class="post-toc-text">系统常用函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#连接字符串函数"><span class="post-toc-text">连接字符串函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#其他字符串处理函数"><span class="post-toc-text">其他字符串处理函数</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简介"><span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#环境搭建"><span class="post-toc-text">环境搭建</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据库基础知识"><span class="post-toc-text">数据库基础知识</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SQL注入一般流程"><span class="post-toc-text">SQL注入一般流程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Mysql函数"><span class="post-toc-text">Mysql函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#系统常用函数"><span class="post-toc-text">系统常用函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#连接字符串函数"><span class="post-toc-text">连接字符串函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#其他字符串处理函数"><span class="post-toc-text">其他字符串处理函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#regexp、like语句"><span class="post-toc-text">regexp、like语句</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
